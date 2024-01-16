@@ -89,7 +89,7 @@ resource "aws_security_group" "alb" {
 }
 
 resource "aws_security_group_rule" "allow_http_inbound" {
-  type = "igress"
+  type = "ingress"
   security_group_id = aws_security_group.alb.id
 
   from_port = local.http_port
